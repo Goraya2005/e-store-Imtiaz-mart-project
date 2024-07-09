@@ -1,0 +1,75 @@
+_format_version: "3.0"
+_transform: true
+
+services:
+  - name: user-service
+    url: http://host.docker.internal:8003
+    routes:
+      - name: user-service-route
+        paths:
+          - /auth
+        methods:
+          - GET
+          - POST
+          - PATCH
+          - DELETE
+  
+  - name: product-service
+    url: http://host.docker.internal:8004
+    routes:
+      - name: product-service-route
+        paths:
+          - /product
+        methods:
+          - GET
+          - POST
+          - PATCH
+          - DELETE
+    
+  - name: order-service
+    url: http://host.docker.internal:8005
+    routes:
+      - name: order-service-route
+        paths:
+          - /order
+        methods:
+          - GET
+          - POST
+          - PATCH
+          - DELETE
+
+  - name: inventory-service
+    url: http://host.docker.internal:8006
+    routes:
+      - name: inventory-service-route
+        paths:
+          - /inventory
+        methods:
+          - GET
+          - POST
+          - PATCH
+          - DELETE
+
+  - name: notification-service
+    url: http://host.docker.internal:8007
+    routes:
+      - name: notification-service-route
+        paths:
+          - /notification
+        methods:
+          - GET
+          - POST
+          - PATCH
+          - DELETE
+
+  - name: payment-service
+    url: http://host.docker.internal:8008
+    routes:
+      - name: payment-service-route
+        paths:
+          - /payment
+        methods:
+          - GET
+          - POST
+          - PATCH
+          - DELETE

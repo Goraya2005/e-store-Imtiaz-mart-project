@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "user service"
+version = "0.1.0"
+description = ""
+authors = ["Naeem Goraya <goraya2005@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.111.0"
+uvicorn = "^0.29.0"
+requests = "^2.32.2"
+pydantic = "^2.7.1"
+jsonmerge = "^1.9.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
